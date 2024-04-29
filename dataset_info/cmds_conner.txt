@@ -1,0 +1,4 @@
+awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r
+	for finding movies with the largest cast
+awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r
+	for finding the movies with the most sayings
