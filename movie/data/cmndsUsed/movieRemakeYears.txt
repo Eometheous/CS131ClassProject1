@@ -1,0 +1,12 @@
+Querying amount of movie remakes for each year
+awk -F"<td>" '{      
+    for(i=1; i<=NF; i++) {
+        if($i ~ /^[[:space:]]*[0-9]+[[:space:]]*$/) {
+            printf "%s\n", $i
+        }
+    }
+}' remakes.html | sort -n | uniq -c > movieRemakeYears.txt 
+
+removing weird incorrect data from the dataset
+sort -n movieRemakeYears.txt > fixedMovieRemakeYears.txt
+
