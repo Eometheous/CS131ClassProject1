@@ -1,0 +1,3 @@
+gets the top ten directors who directed the most movies. 
+
+grep '<td> D:' main.html | awk '{print $2}' | sort | uniq -c | sort | tail
