@@ -1,0 +1,10 @@
+  34 D:M.LeRoy
+  36 D:DeMille
+  36 D:Griffith
+  36 D:Hiller
+  36 D:J.Ford
+  40 D:Lubitsch
+  41 D:Curtiz
+  53 D:Cukor
+  53 D:R.Stevens
+  80 D:Hitchcock
