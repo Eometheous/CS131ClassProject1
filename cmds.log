@@ -1,0 +1,544 @@
+    1  exit
+    2  logout
+    3  echo "hello
+    4  echo "hello"
+    5  vi test.txt
+    6  rm test.txt 
+    7  explorer.exe
+    8  pwd
+    9  explorer.exe  .
+   10  vi test.txt
+   11  ls
+   12  cat movie
+   13  cd movie
+   14  ls
+   15  cat movies.data.html
+   16  lls
+   17  ls
+   18  cd data
+   19  ;s
+   20  ls
+   21  cat casts.html
+   22  ls
+   23  cat queries.sql
+   24  cat main
+   25  cat main.html
+   26  ls
+   27  cat TVChannels.doc
+   28  ls
+   29  cat movies.macros
+   30  ls
+   31  studios.html
+   32  cat studios.html
+   33  cat studios.html | sort
+   34  ls
+   35  cat locales.html
+   36  cat people.html
+   37  ls
+   38  cat movies.macros
+   39  sayings.html
+   40  cat sayings.html
+   41  ls
+   42  cat casts.html
+   43  ls
+   44  ls quotes.html
+   45  cat quotes.html
+   46  ls
+   47  cat quotes.html
+   48  cd ..
+   49  ls
+   50  logout
+   51  vi movies_most_quotes.txt
+   52  vi movies_most_sayings.txt
+   53  vi movies_cast_size.txt
+   54  ls
+   55  cd movie
+   56  cd data
+   57  clear
+   58  ls
+   59  cat casts.html
+   60  awk '{if(substr(0,8) == "<tr><th>") print $0}' casts.html 
+   61  awk '{if(substr(0,8) == "<tr><td>") print $0}' casts.html 
+   62  awk '{if(substr(0,9\) == "<tr><td>") print $0}' casts.html 
+   63  awk '{if(substr(0,9) == "<tr><td>") print $0}' casts.html 
+   64  awk '{if(substr(0,10) == "<tr><td>") print $0}' casts.html 
+   65  awk '{print $0}' casts.html
+   66  awk '{if(substr(0,9) == '<tr><td>') print $0}' casts.html 
+   67  awk '{if(substr(0,9) == <tr><td>) print $0}' casts.html 
+   68  awk '{if(substr(0,9) == "<tr><td>") print $0}' casts.html 
+   69  awk '{if(substr($1) == "<tr><td>") print $0}' casts.html 
+   70  awk '{if(substr($1, 0, 9) == "<tr><td>") print $0}' casts.html 
+   71  ls
+   72  cd movies
+   73  cd movie/
+   74  cd data/
+   75  clear
+   76  awk '{if(substr($1,0) == "<td><td>") print $0}' casts.html
+   77  cat casts.html
+   78  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html
+   79  awk -F> '{print $4}' 
+   80  awk -F'>' '{print $4}' 
+   81  awk -F'>' '{print $4}' casts.html
+   82  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}'
+   83  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c
+   84  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort
+   85  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r
+   86  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | awk '{if(substr($0,0,1) == ' ' print substr($0,1) | uniq -c | sort -
+   87  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | awk '{if(substr($0,0,1) == ' ') print substr($0,1) | uniq -c | sort -r
+   88  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r | grep Sleepers
+   89  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r | grep similar
+   90  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //g | uniq -c | sort -r | grep similar
+   91  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r
+   92  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //g' | uniq -c | sort -r | grep similar
+   93  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r | grep similar
+   94  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r 
+   95  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r | grep similar
+   96  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r | grep Sleeper
+   97  ls
+   98  awk '{if(substr($1,0) == "<tr><td>") print $0}' casts.html | awk -F'>' '{print $4}' | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | sed -e 's/^ //' | uniq -c | sort -r > movie_cast_size.txt
+   99  cat movie_cast_size.txt 
+  100  cat quotes.html
+  101  cd ..
+  102  git config --global doperdoge
+  103  git config --global user.name doperdoge
+  104  git config --global user.email adudeof@gmail.com
+  105  cd ~/.ssh
+  106  mkdir ~/.ssh
+  107  cd ~/.ssh
+  108  ssh-keygen
+  109  cat is_rsa.pub
+  110  cat ssh_key.txt
+  111  cat ssh_key.txt.pub 
+  112  cd ..
+  113  ls
+  114  cd home
+  115  ls
+  116  cd doperdoge
+  117  ls
+  118  git status
+  119  git clone https://github.com/Eometheous/CS131ClassProject1
+  120  git status
+  121  CS131ClassProject1/
+  122  cd CS131ClassProject1/
+  123  cd ..
+  124  cd CS131ClassProject1/
+  125  mkdir dataset_info
+  126  cd dataset_info/
+  127  cd ..
+  128  find $PWD -type d -name dataset_info/
+  129  find $PWD -type d -whilename dataset_info/
+  130  find $PWD -type d -wholename dataset_info/
+  131  find $PWD -type d -wholename dataset_info
+  132  find $PWD -type d dataset_info
+  133  path
+  134  $PATH
+  135  find $PWD -type d -name dataset_info
+  136  cd ..
+  137  movie
+  138  cd movie/
+  139  cd data/
+  140  ls
+  141  rm '{print $4}' 
+  142  find $PWD -type f -name movie_cast_size.txt 
+  143  mv /home/doperdoge/movie/data/movie_cast_size.txt /home/doperdoge/CS131ClassProject1/dataset_info 
+  144  ls
+  145  cd ..
+  146  cd CS131ClassProject1/
+  147  ls
+  148  cd dataset_info/
+  149  ls
+  150  vi cmds_conner.txt
+  151  cd ..
+  152  cd movie/
+  153  cd data/
+  154  cat sayings.html 
+  155  awk '{if(substr(0$,0,9) == "<TR><TD>") print $0}'
+  156  awk '{if(substr($0,0,9) == "<TR><TD>") print $0}'
+  157  awk '{if(substr($0,0,9) == "<TR><TD>") print $0}' sayings.html 
+  158  awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html 
+  159  awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html | awk -F':' '{print $2}' | awk -F'<' '{print $1}'
+  160  awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r
+  161  awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html | awk -F':' '{print $2}' | awk -F'<' '{print $1}' | uniq -c | sort -r > movie_num_sayings.txt
+  162  find $PWD -type f -name movie_num_sayings.tx 
+  163  mv /home/doperdoge/CS131ClassProject1/movie/data/movie_num_sayings.txt /home/doperdoge/CS131ClassProject1/dataset_info 
+  164  cd ..
+  165  ls
+  166  cd data
+  167  ls
+  168  cd ..
+  169  la
+  170  ls
+  171  cd dataset_info/
+  172  ls
+  173  cd ..
+  174  git status
+  175  git .add dataset_info/
+  176  git add dataset_info/
+  177  git status
+  178  git push origin master
+  179  git push -u origin master
+  180  git commit -m "commiting data on biggest cast and sayings"
+  181  git push origin master
+  182  git pull
+  183  git status
+  184  git pull request
+  185  git push -u origin main
+  186  git remote add https://github.com/Eometheous/CS131ClassProject1
+  187  git push -u origin main
+  188  git push -u origin https://github.com/Eometheous/CS131ClassProject1
+  189  git pull https://github.com/Eometheous/CS131ClassProject1 
+  190  git clone https://github.com/doperdoge/CS131ClassProject1.git
+  191  ls
+  192  rm CS131ClassProject1/
+  193  rmdir CS131ClassProject1/
+  194  rmdir -r CS131ClassProject1/
+  195  rmdir -rf CS131ClassProject1/
+  196  rm -rf CS131ClassProject1/
+  197  ls
+  198  cd ..
+  199  clone https://github.com/doperdoge/CS131ClassProject1.git
+  200  git clone https://github.com/doperdoge/CS131ClassProject1.git
+  201  cd CS131ClassProject1/
+  202  cd dataset_info/
+  203  cd ..
+  204  find $PWD -type d -name dataset_info
+  205  cd ..
+  206  $PWD
+  207  mv /home/doperdoge/CS131ClassProject1/dataset_info /home/doperdoge
+  208  ls
+  209  rm -rf CS131ClassProject1/
+  210  git clone https://github.com/doperdoge/CS131ClassProject1.git
+  211  mv /home/doperdoge/dataset_info /home/doperdoge/CS131ClassProject1
+  212  cd CS131ClassProject1/
+  213  ls
+  214  cd dataset_info/
+  215  la
+  216  ls
+  217  vi cmds_conner.txt 
+  218  cd ..
+  219  cd .
+  220  cd..
+  221  cd ..
+  222  git status
+  223  cd CS131ClassProject1/
+  224  git status
+  225  git add dataset_info/
+  226  git status
+  227  git commit -m "test commit"
+  228  git push -u origin master
+  229  git push 
+  230  git push origin main
+  231  git checkout master
+  232  git status 
+  233  cd CS131ClassProject1/
+  234  git ststua
+  235  git status 
+  236  git commit -m "test commit"
+  237  $PATH
+  238  cd ..
+  239  $PATH
+  240  pwd
+  241  cd CS131ClassProject1/
+  242  cd dataset_info/
+  243  pwd
+  244  mv /home/doperdoge/CS131ClassProject1/dataset_info /home/doperdoge
+  245  cd ..
+  246  rm -rf CS131ClassProject1/
+  247  ls
+  248  git clone 
+  249  git clone git@github.com:Eometheous/CS131ClassProject1.git
+  250  cd dataset_info/
+  251  pwd
+  252  cd ..
+  253  ls
+  254  git clone https://github.com/Eometheous/CS131ClassProject1 
+  255  cd CS131ClassProject1/
+  256  pwd
+  257  mv /home/doperdoge/dataset_info /home/doperdoge/CS131ClassProject1
+  258  ls
+  259  git ststus
+  260  git status
+  261  git add dataset_info/
+  262  git commit -m "test commit"
+  263  git push origin Conner's-Branch
+  264  git push -u origin Conner's-Branch
+  265  git push remote Conner's-Branch
+  266  git push -u origin Conner's-Branch
+  267  git push origin "Conner's-Branch
+  268  git init
+  269  git remote add https://github.com/Eometheous/CS131ClassProject1
+  270  git status
+  271  git push
+  272  git remote -v
+  273  git remote add origin git@github.com:doperdoge/CS131ClassProject1.git
+  274  git remote remove origin
+  275  git remote add origin git@github.com:doperdoge/CS131ClassProject1.git
+  276  git remote -v
+  277  git push orign Conner's-Branch
+  278  git push origin Conner's-Branch
+  279  git branch
+  280  git pull
+  281  git pull origin
+  282  git remote -v
+  283  ls
+  284  dataclen.dll 
+  285  cd dataset_info/
+  286  ls
+  287  cd ..
+  288  cd ~/.ssh && ssh-keygen
+  289  cat id_rsa.pub 
+  290  cd ..
+  291  cd CS131ClassProject1/
+  292  git status
+  293  git branch
+  294  git pull
+  295  ls
+  296  git remote add origin git@github.com:doperdoge/CS131ClassProject1.git
+  297  git pull origin main
+  298  git pull origin Conner's_Branch
+  299  git pull origin Conner's-Branch
+  300  git branch --set-upstream-to=orign/main main
+  301  git checkout Conner's-Branch
+  302  history > cmds.log
+  303  vi cmds.log
+  304  git remove origin
+  305  git remote remove origin
+  306  cd CS131ClassProject1/
+  307  cd dataset_info/
+  308  pwd
+  309  cd ..
+  310  mv /home/doperdoge/CS131ClassProject1/dataset_info /home/doperdoge
+  311  ls
+  312  cd ..
+  313  ls
+  314  rm -rf CS131ClassProject1/
+  315  git remote add origin git@github.com:doperdoge/CS131ClassProject1.git
+  316  git remote add origin git@github.com:Eomrtheous/CS131ClassProject1.git
+  317  git remote add origin git@github.com:Eometheous/CS131ClassProject1.git
+  318  git clone git@github.com:Eometheous/CS131ClassProject1.git
+  319  git branch
+  320  cd CS131ClassProject1/
+  321  git branch
+  322  git checkout Conner's-Branch
+  323  git pull
+  324  git push origin Conner's-Branch
+  325  git remote -v
+  326  git pull
+  327  git checkout Conner's-Branch
+  328  git branch
+  329  git branch connersBranch
+  330  git branch
+  331  checkout connersBranch
+  332  git checkout connersBranch
+  333  cd ..
+  334  ls
+  335  cd dataset_info/
+  336  pwd
+  337  cd ..
+  338  cd CS131ClassProject1/
+  339  git branch
+  340  mv /home/doperdoge/dataset_info /home/doperdoge/CS131ClassProject1/
+  341  git status
+  342  git add dataset_info/
+  343  git commit -m "test"
+  344  git push origin connersBranch
+  345  exit
+  346  cd CS131ClassProject1/
+  347  cd data
+  348  cd movie
+  349  cd data
+  350  ls
+  351  cat casts.html 
+  352  cd ..
+  353  ls
+  354  cd data
+  355  ls
+  356  cat remakes.html 
+  357  s
+  358  ls
+  359  cat movies.macros 
+  360  ls
+  361  cat people.html 
+  362  ls
+  363  cat queries.sql 
+  364  cat casts.html 
+  365  ls
+  366  cat remakes.html 
+  367  cd ..
+  368  ls
+  369  cd data
+  370  ls
+  371  cd CS131ClassProject1/
+  372  cd data
+  373  cd movie
+  374  cd data/
+  375  ls
+  376  cat sayings.html 
+  377  cd ..
+  378  cd data/
+  379  ls
+  380  cat quotes.html 
+  381  ls
+  382  cat  main.html 
+  383  awk '{if(substr($1,0) == "<tr><td>") print $0}'
+  384  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html 
+  385  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $1}'
+  386  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}'
+  387  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed 's/<td>//g'
+  388  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//'
+  389  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //'
+  390  git branch
+  391  git pull
+  392  git branch
+  393  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $2}' | sort | uniq -c
+  394  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' 
+  395  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sort | uniq -c
+  396  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}'
+  397  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sed 's/[a-z]//g'
+  398* awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sort | awk '{if(substr($2,0,1) == 1) print $0}' | sed 's/[a-z]//g' | sor
+  399  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sed 's/[a-z]//g'
+  400  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}'
+  401  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
+  402  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' -e 's/ //g' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
+  403  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed -e 's/[a-z]//g' -e 's/ //g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
+  404  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
+  405  git pull
+  406  cat main.html 
+  407  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
+  408  cd ..
+  409  git branch query_info_numMoviesPerYear
+  410  cd movie/
+  411  cd data/
+  412* awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<
+  413  ls
+  414  rm numMoviesPerYear 
+  415  rm numMoviesPerYear.txt
+  416  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r > numMoviesPerYear.txt
+  417  pwd
+  418  mv /home/doperdoge/CS131ClassProject1/movie/data/numMoviesPerYear.txt /home/doperdoge/CS131ClassProject1/dataset_info/
+  419  ls
+  420  cd ..
+  421  cd dataset_info/
+  422  ls
+  423  git checkout query_info_numMoviesPerYear 
+  424  ls
+  425  cd ..
+  426  git status
+  427  git add dataset_info/
+  428  git status
+  429  git commit -m "number of movies per year"
+  430  git push origin query_info_numMoviesPerYear 
+  431  cd movie/
+  432  cd data/
+  433* awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | 
+  434  ls
+  435  cd ..
+  436  ls
+  437  cd ..
+  438  la
+  439  ls
+  440  cd dataset_info/
+  441  ls
+  442  vi cmds_conner.txt 
+  443  git status 
+  444  git add cmds_conner.txt 
+  445  git commit -m "updated the command file with the command used"
+  446  git push origin query_info_numMoviesPerYear 
+  447  awk '{print $0}' numMoviesPerYear.txt movie_cast_size.txt 
+  448  cd ..
+  449  ls
+  450  movie
+  451  cd movie/
+  452  ls
+  453  cd da
+  454  cd data/
+  455  ls
+  456  cat movies.macros 
+  457  ls
+  458  cat locales.html 
+  459  cat keys.txt 
+  460  cat main.html 
+  461  ls
+  462  cat adds.txt 
+  463  ls
+  464  cd ..
+  465  ls
+  466  cat doc.html 
+  467  ls
+  468  cd ..
+  469  ls
+  470  cd dataset_info/
+  471  ls
+  472  awk 'BEGIN { print "Product Cost Date" } FNR>1 && NR==FNR { price[$1]=$2; next } FNR>1 { printf "%s $%.2f %s\n",$1, price[$1]*$2, $3}' price.txt purchasing.txt 
+  473  awk 'BEGIN { print "Product Cost Date" } FNR>1 && NR==FNR { movie_cast_size[$1]=$2; next } FNR>1 { printf "%s $%.2f %s\n",$1, movie_cast_size.txt[$1], $3}' movie_cast_size.txt numMoviesPerYear.txt 
+  474  awk 'BEGIN { print "Product Cost Date" } FNR>1 && NR==FNR { movie_cast_size[$1]=$2; next } FNR>1 { printf "%s $%.2f %s\n",$1, 'movie_cast_size.txt'[$1], $3}' movie_cast_size.txt numMoviesPerYear.txt 
+  475  awk 'BEGIN { print "Product Cost Date" } FNR>1 && NR==FNR { movie_cast_size.txt[$1]=$2; next } FNR>1 { printf "%s $%.2f %s\n",$1, movie_cast_size.txt[$1], $3}' movie_cast_size.txt numMoviesPerYear.txt 
+  476*  
+  477  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}'
+  478  cd .
+  479  cd ..
+  480  cd movie
+  481* 
+  482  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}'
+  483  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' 
+  484  awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' > movieReleaseDate.txt
+  485  awk '{print $(NR-1)}'
+  486  ls
+  487  awk '{print $(NR-1)}' movieReleaseDate.txt 
+  488  awk '{print $(NR)}' movieReleaseDate.txt 
+  489  awk '{print $NR}' movieReleaseDate.txt 
+  490  awk '{print $0}' movieReleaseDate.txt 
+  491  awk '{print $NR}' movieReleaseDate.txt 
+  492  awk '{print $0}' movieReleaseDate.txt 
+  493  awk '{print $(NF-1)}' movieReleaseDate.txt 
+  494  ls
+  495  cat casts.html 
+  496  ls 
+  497  cat main.html 
+  498  ls
+  499  awk '{print $0}' movieReleaseDate.txt 
+  500  pwd
+  501  ls
+  502  cd ..
+  503  mv /home/doperdoge/CS131ClassProject1/movie/data /home/doperdoge/CS131ClassProject1/dataset_info/
+  504  cd dataset_info/
+  505  ls
+  506  vi cmds_conner.txt 
+  507  git branch movies-with-release-date
+  508  git checkout movies-with-release-date 
+  509  git status 
+  510  git restore
+  511  git branch
+  512  git checkout query_info_numMoviesPerYear 
+  513  git pull
+  514  git checkout movies-with-release-date 
+  515  ls
+  516  cd ..
+  517  ls
+  518  movie
+  519  cd movie
+  520  ls
+  521  mv /home/doperdoge/CS131ClassProject1/dataset_info/data /home/doperdoge/CS131ClassProject1/movie/
+  522  mv /home/doperdoge/CS131ClassProject1/movie/data/moviesReleaseDate.txt /home/doperdoge/CS131ClassProject1/dataset_info/
+  523  ls
+  524  cd data
+  525  ls
+  526  mv /home/doperdoge/CS131ClassProject1/movie/data/movieReleaseDate.txt /home/doperdoge/CS131ClassProject1/dataset_info/
+  527  git branch
+  528  git status
+  529  cd ..
+  530  ls
+  531  cd ..
+  532  ls
+  533  cd dataset_info/
+  534  ls
+  535  git status
+  536  cd ..
+  537  git add dataset_info/
+  538  git status
+  539  git push origin movies-with-release-date 
+  540  git commit -m "has the movies with the release year"
+  541  git push origin movies-with-release-date 
+  542  git branch
+  543  histroy > cmds.log
+  544  history > cmds.log
