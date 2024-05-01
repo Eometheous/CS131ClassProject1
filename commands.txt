@@ -1,0 +1,17 @@
+
+command:
+sort casts.html | grep '<tr><td>' | awk -F'<' '{print $5}' | awk -F'>' '{print $2}' | sed -e 's/^ //' -e 's/s a//' | sort | uniq -c | sort -n >> actors_with_most_movies.txt
+
+output (last 12 lines):
+     42 Nigel Bruce
+     42 Sean Connery
+     44 Jack Nicholson
+     45 Peter Lorre
+     46 John Carradine
+     47 Burt Lancaster
+     48 Cary Grant
+     50 Gary Cooper
+     50 Henry Fonda
+     52 James Stewart
+     56 Humphrey Bogart
+     56 Vincent Price
