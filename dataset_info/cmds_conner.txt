@@ -4,3 +4,5 @@ awk '{if(substr($0,0,8) == "<TR><TD>") print $0}' sayings.html | awk -F':' '{pri
 	for finding the movies with the most sayings
 awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' | awk '{print $NF}' | sed 's/[a-z]//g' | sort | uniq -c | awk '{if(substr($2,0,1) == 1) print $0}' | sort -r
 	for finding number of movies in a year across multiple years
+awk '{if(substr($1,0) == "<tr><td>") print $0}' main.html | awk -F':' '{print $2}' | sed -e 's/<td>//g' -e 's/.$//' -e 's/^ //' > movieReleaseDate.txt
+	for getting the movies with their release dates 
