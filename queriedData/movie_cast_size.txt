@@ -8680,11 +8680,4 @@
       1 A Ca{\c}ca
       1 A Bug's Life
       1 A Brief History of Time
-      1  1138
-      1 
-      1 
-      1 
-      1 
-      1 
-      1 
-      1 
+      1 1138
